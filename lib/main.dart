@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:news_flutter/layout/news_layout/news_layout.dart';
+import 'package:news_flutter/shared/network/remote/dio_helper.dart';
 
 void main() {
+  DioHelper.init();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
+        indicatorColor: colorFromHex('FFEC3C36'),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
+          actionsIconTheme: const IconThemeData(color: Colors.black),
           elevation: 0.0,
           titleTextStyle: const TextStyle(
             color: Colors.black,

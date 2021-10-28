@@ -6,9 +6,15 @@ class DioHelper {
 
   /// Initialize dio
   static init() {
-    dio = Dio(BaseOptions(
-      baseUrl: BASE_URL,
+    dio = Dio(
+        BaseOptions(
+      baseUrl: baseUrl,
       receiveDataWhenStatusError: true,
     ));
+  }
+
+  /// Get Data From Database
+  static Future<Response> getData({required String url, required Map<String, dynamic> query}) async {
+    return await dio.get(url, queryParameters: query);
   }
 }

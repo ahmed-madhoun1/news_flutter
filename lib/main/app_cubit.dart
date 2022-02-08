@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_flutter/app_state.dart';
-import 'package:news_flutter/shared/components/components.dart';
 import 'package:news_flutter/shared/network/local/cache_helper.dart';
+
+import 'app_state.dart';
 
 class AppCubit extends Cubit<AppStates> {
   AppCubit() : super(InitAppState());

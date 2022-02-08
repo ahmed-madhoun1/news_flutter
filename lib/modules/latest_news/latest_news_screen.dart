@@ -14,7 +14,7 @@ class LatestNewsScreen extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           List<dynamic> latestNews = NewsCubit.get(context).latestNews;
-          return articlesBuilder(list: latestNews);
+          return articlesBuilder(context: context, list: latestNews,newsCubit: NewsCubit.get(context), showSaveButton: true);
         });
   }
 }
